@@ -1,0 +1,73 @@
+
+[tool.poetry]
+name = "table-parsing"
+version = "0.1.0"
+description = ""
+authors = ["LanChu"]
+
+[tool.poetry.dependencies]
+python = "3.9.19"
+hydra-core = "^1.1.1"
+camelot-py = "0.11.0"
+cleanco = "2.2"
+langchain = "0.1.9"
+numpy = "1.26.4"
+openai = "0.27.8"
+pandas = "2.2.1"
+polyfuzz = "0.4.2"
+pydantic = "2.6.4"
+pyyaml = "6.0.0"
+requests = "2.27.1"
+tabula-py = "2.9.0"
+jupytext = "^1.16.1"
+opencv-python = "^4.9.0.80"
+tiktoken = "^0.6.0"
+jpype1 = "^1.5.0"
+packaging = "21.3"
+
+[tool.poetry.dev-dependencies]
+pdoc3 = "^0.10.0"
+pytest = "^6.2.5"
+pre-commit = "^2.17.0"
+ipykernel = "^6.28.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+
+# Same as Black.
+line-length = 88
+
+[tool.ruff.lint]
+ignore = ["E501"]
+select = ["B","C","E","F","W","B9", "I", "Q"]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
